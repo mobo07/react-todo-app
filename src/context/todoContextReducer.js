@@ -22,6 +22,10 @@ export const reducer = (state, action) => {
       state = [...newList];
       return state;
     }
+    case "CLEAR_COMPLETED": {
+      state = state.filter((todo) => !todo.completed);
+      return state;
+    }
     default:
       return state;
   }

@@ -1,10 +1,7 @@
 import { createContext, useReducer } from "react";
 import { reducer } from "./todoContextReducer";
-import { generateId } from "../utils/generateId";
 
-const INITIAL_STATE = [
-  { id: generateId(), item: "default complete", completed: true },
-];
+const INITIAL_STATE = [];
 
 export const TodoContext = createContext(INITIAL_STATE);
 
